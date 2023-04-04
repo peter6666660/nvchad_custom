@@ -53,6 +53,16 @@ local plugins = {
   --   enabled = false
   -- },
 
+  -- 类似easymotion 快查找 vim插件-- 使用 leap替换
+	{
+		"phaazon/hop.nvim",
+		event = "BufRead",
+		config = function()
+			require("hop").setup({})
+			vim.api.nvim_set_keymap("n", "s", ":HopWord<cr>", { silent = true })
+			vim.api.nvim_set_keymap("n", "S", ":HopChar2<cr>", { silent = true })
+		end,
+	},
 }
 
 return plugins
