@@ -6,7 +6,7 @@ local plugins = {
   -- Override plugin definition options
 
   {
-    "neovim/nvim-lspconfig",
+      "neovim/nvim-lspconfig",
     dependencies = {
       -- format & linting
       {
@@ -59,10 +59,17 @@ local plugins = {
 		event = "BufRead",
 		config = function()
 			require("hop").setup({})
-			vim.api.nvim_set_keymap("n", "s", ":HopWord<cr>", { silent = true })
-			vim.api.nvim_set_keymap("n", "S", ":HopChar2<cr>", { silent = true })
 		end,
 	},
+  --翻译插件
+  {
+    "voldikss/vim-translator",
+    lazy = false,
+  },
+  -- 轻松修改括号，引号等成对符号
+  {"tpope/vim-surround", lazy=false},
+  -- 快速选中块, 空格键激活
+  { "gcmt/wildfire.vim", lazy=false }
 }
 
 return plugins
