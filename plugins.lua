@@ -74,12 +74,14 @@ local plugins = {
 	{
 		"akinsho/toggleterm.nvim",
 		config = function()
-     require("toggleterm").setup()
-    -- 加载lazigit
+     -- 加载lazigit
      require "custom.configs.toggleterm_lazigit"
 		end,
     lazy=false
-	}
+	},
+  -- 快速选中 类似 vscode 的 c-d
+	-- https://github.com/mg979/vim-visual-multi/wiki/Quick-start
+	{ "mg979/vim-visual-multi", lazy=false }
 }
 
 return plugins

@@ -23,7 +23,12 @@
 -- 	},
 -- })
 
-local Terminal = require("toggleterm.terminal").Terminal
+local present, terminal = pcall(require, "toggleterm.terminal")
+if not present then
+  return
+end
+
+local Terminal = terminal.Terminal
 
 -- lazigit
 local lazygit = Terminal:new({
