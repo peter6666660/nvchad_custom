@@ -6,7 +6,7 @@ local plugins = {
   -- Override plugin definition options
 
   {
-      "neovim/nvim-lspconfig",
+    "neovim/nvim-lspconfig",
     dependencies = {
       -- format & linting
       {
@@ -69,7 +69,17 @@ local plugins = {
   -- 轻松修改括号，引号等成对符号
   {"tpope/vim-surround", lazy=false},
   -- 快速选中块, 空格键激活
-  { "gcmt/wildfire.vim", lazy=false }
+  { "gcmt/wildfire.vim", lazy=false },
+  -- 终端配置
+	{
+		"akinsho/toggleterm.nvim",
+		config = function()
+     require("toggleterm").setup()
+    -- 加载lazigit
+     require "custom.configs.toggleterm_lazigit"
+		end,
+    lazy=false
+	}
 }
 
 return plugins
