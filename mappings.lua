@@ -12,7 +12,7 @@ M.general = {
     --vim-translator 翻译
     ["<leader>tt"] = { "<cmd>TranslateW<cr>", "翻译整行", opts={silent=true} },
     --toggleterm 终端及lazigit浮窗
-    ["<leader>gg"] =  {"<cmd>lua _LAZYGIT_TOGGLE()<CR>", "lazygit",opts={silent=true}}
+    ["<leader>gg"] =  {"<cmd>lua require('custom/configs/toggleterm_lazygit').toggle_lazygit()<CR>", "lazygit",opts={silent=true}}
   },
   v = {
     ["<leader>tt"] = { ":TranslateW<cr>", "选中翻译", opts={silent=true} },
