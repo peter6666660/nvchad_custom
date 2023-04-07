@@ -4,6 +4,31 @@ local overrides = require("custom.configs.overrides")
 local plugins = {
 
   -- Override plugin definition options
+  {
+    "nvim-treesitter",
+    opts = {
+      -- windwp/nvim-ts-autotag 支持html闭合
+      autotag = {
+        enable = true,
+        filetypes = { "html" , "javascriptreact", 'typescriptreact', 'vue', 'xml', 'markdown', 'handlebars', 'hbs', 'tsx', 'jsx', 'rescript' }
+      },
+      -- JoosepAlviste/nvim-ts-context-commentstring
+      context_commentstring = {
+        enable = true,
+        enable_autocmd = false,
+      }
+    }
+  },
+  -- 注释插件
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      -- 支持jsx, tsx, vue
+      require('Comment').setup {
+        pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+      }
+    end
+  },
 
   {
     "neovim/nvim-lspconfig",
@@ -77,7 +102,13 @@ local plugins = {
 	},
   -- 快速选中 类似 vscode 的 c-d
 	-- https://github.com/mg979/vim-visual-multi/wiki/Quick-start
-	{ "mg979/vim-visual-multi", lazy=false }
+	{ "mg979/vim-visual-multi", lazy=false },
+  -- 自动闭合html等标签
+  { "windwp/nvim-ts-autotag", lazy=false },
+  -- 注释支持 jsx
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring"
+  }
 }
 
 return plugins
