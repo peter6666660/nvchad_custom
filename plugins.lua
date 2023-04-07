@@ -108,7 +108,22 @@ local plugins = {
   -- 注释支持 jsx
   {
     "JoosepAlviste/nvim-ts-context-commentstring"
-  }
+  },
+  -- neovim lsp 变量跳转 有ui支持
+  -- {
+  --   "glepnir/lspsaga.nvim",
+  --   branch = "main",
+  --   lazy=false,
+  --   config = function()
+  --     require("lspsaga").setup({
+  --       ui = {
+  --         -- run PackerCompile
+  --         border = "single",
+  --       },
+  --     })
+  --   end
+  -- }
+  --
 }
 
 return plugins
