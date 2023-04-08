@@ -4,6 +4,7 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<leader>bo"] = { ":BufCloseOther<CR>", "关闭其他tab", opts = { nowait = true } },
     ["<leader>q"] = { "<cmd>q<CR>", "退出", opts = { nowait = true } },
     ["<leader>ww"] = { "<cmd> w <CR>", "save file" },
     -- ["<leader><cr>"] = { "<cmd>nohlsearch<CR>", "清空选中" },
