@@ -2,23 +2,6 @@ local overrides = require("custom.configs.overrides")
 
 ---@type NvPluginSpec[]
 local plugins = {
-
-  -- Override plugin definition options
-  {
-    "nvim-treesitter",
-    opts = {
-      -- windwp/nvim-ts-autotag 支持html闭合
-      autotag = {
-        enable = true,
-        filetypes = { "html" , "javascriptreact", 'typescriptreact', 'vue', 'xml', 'markdown', 'handlebars', 'hbs', 'tsx', 'jsx', 'rescript' }
-      },
-      -- JoosepAlviste/nvim-ts-context-commentstring
-      context_commentstring = {
-        enable = true,
-        enable_autocmd = false,
-      }
-    }
-  },
   -- 注释插件
   {
     "numToStr/Comment.nvim",

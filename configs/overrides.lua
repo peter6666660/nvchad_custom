@@ -19,6 +19,28 @@ M.treesitter = {
     --   "python"
     -- },
   },
+  -- windwp/nvim-ts-autotag 支持html闭合
+  autotag = {
+    enable = true,
+    filetypes = {
+      "html" ,
+      "javascriptreact",
+      'typescriptreact',
+      'vue',
+      'xml',
+      'markdown',
+      'handlebars',
+      'hbs',
+      'tsx',
+      'jsx',
+      'rescript'
+    }
+  },
+  -- JoosepAlviste/nvim-ts-context-commentstring
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  }
 }
 
 M.mason = {
@@ -41,7 +63,6 @@ M.nvimtree = {
   git = {
     enable = true,
   },
-
   renderer = {
     highlight_git = true,
     icons = {
