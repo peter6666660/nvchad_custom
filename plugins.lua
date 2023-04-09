@@ -92,7 +92,16 @@ local plugins = {
   {
     "JoosepAlviste/nvim-ts-context-commentstring"
   },
-  -- neovim lsp 变量跳转 有ui支持
+  -- markdown-preview
+  -- {
+  --   "iamcco/markdown-preview.nvim",
+  --   run = "cd app && npm install",
+  --   setup = function()
+  --   vim.g.mkdp_filetypes = { "markdown" }
+  --   end,
+  --   ft = { "markdown" },
+  -- }
+-- neovim lsp 变量跳转 有ui支持
   -- {
   --   "glepnir/lspsaga.nvim",
   --   branch = "main",
