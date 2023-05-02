@@ -6,17 +6,9 @@
 --   command = "tabdo wincmd =",
 -- })
 
-local opt = vim.opt
 
-opt.foldenable = false
-opt.foldlevel = 99
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
--- 无法自动启折叠功能临时解决方案 https://github.com/nvim-telescope/telescope.nvim/issues/699
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "*" },
-  command = "normal zx",
-})
+-- 加载默认配置
+require("custom.setting").load_options()
 
 -- closes tab + other buffers except the current one
 local function closeOtherBufs(c_buf)

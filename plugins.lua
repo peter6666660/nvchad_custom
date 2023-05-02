@@ -2,6 +2,14 @@ local overrides = require("custom.configs.overrides")
 
 ---@type NvPluginSpec[]
 local plugins = {
+  {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    lazy = false,
+    config = function()
+      require("todo-comments").setup()
+    end
+  },
   -- 注释插件
   {
     "numToStr/Comment.nvim",
