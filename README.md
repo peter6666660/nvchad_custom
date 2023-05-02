@@ -1,5 +1,6 @@
 # Nvchad custom
 
 ### use
+
 rm -rf ~/.config/nvim/lua/custom/
-git clone https://github.com/thorneLew/nvchad_custom.git ~/.config/nvim/lua/custom  
+git clone https://github.com/thorneLew/nvchad_custom.git ~/.config/nvim/lua/custom
