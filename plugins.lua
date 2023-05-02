@@ -62,32 +62,32 @@ local plugins = {
   -- },
 
   -- 类似easymotion 快查找 vim插件-- 使用 leap替换
-	{
-		"phaazon/hop.nvim",
-		event = "BufRead",
-		config = function()
-			require("hop").setup({})
-		end,
-	},
+  {
+    "phaazon/hop.nvim",
+    event = "BufRead",
+    config = function()
+      require("hop").setup({})
+    end,
+  },
   --翻译插件
   {
     "voldikss/vim-translator",
     lazy = false,
   },
   -- 轻松修改括号，引号等成对符号
-  {"tpope/vim-surround", lazy=false},
+  { "tpope/vim-surround", lazy = false },
   -- 快速选中块, 空格键激活
-  { "gcmt/wildfire.vim", lazy=false },
+  { "gcmt/wildfire.vim",  lazy = false },
   -- 终端配置
-	{
-		"akinsho/toggleterm.nvim",
-    config=true
-	},
+  {
+    "akinsho/toggleterm.nvim",
+    config = true
+  },
   -- 快速选中 类似 vscode 的 c-d
-	-- https://github.com/mg979/vim-visual-multi/wiki/Quick-start
-	{ "mg979/vim-visual-multi", lazy=false },
+  -- https://github.com/mg979/vim-visual-multi/wiki/Quick-start
+  { "mg979/vim-visual-multi", lazy = false },
   -- 自动闭合html等标签
-  { "windwp/nvim-ts-autotag", lazy=false },
+  { "windwp/nvim-ts-autotag", lazy = false },
   -- 注释支持 jsx
   {
     "JoosepAlviste/nvim-ts-context-commentstring"
@@ -101,7 +101,7 @@ local plugins = {
   --   end,
   --   ft = { "markdown" },
   -- }
--- neovim lsp 变量跳转 有ui支持
+  -- neovim lsp 变量跳转 有ui支持
   -- {
   --   "glepnir/lspsaga.nvim",
   --   branch = "main",

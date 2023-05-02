@@ -13,6 +13,8 @@ local sources = {
   b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "javascript", "javascriptreact", "typescript",
     "typescriptreact", } }, -- so prettier works only on these filetypes
 
+  -- json
+  b.formatting.fixjson,
   -- Lua
   b.formatting.stylua,
 
@@ -34,7 +36,8 @@ null_ls.setup {
         callback = function()
           -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
           -- vim.lsp.buf.formatting_sync()
-          vim.lsp.buf.format({ bufnr = bufnr })
+          -- vim.lsp.buf.format({ bufnr = bufnr })
+          vim.lsp.buf.format()
         end,
       })
     end
