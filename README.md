@@ -18,4 +18,5 @@ gcmt/wildfire.vim        // 快速选中块 "" [] () {} 等
 akinsho/toggleterm.nvim  // 终端配置，可以拓展lazit.git 弹出
 mg979/vim-visual-multi   // ctrl + d 快速选中相同单词
 windwp/nvim-ts-autotag    // 自动合并html标签
+sindrets/diffview.nvim    // DiffviewFileHistory 查看文件历史记录  DiffviewClose 关闭
 ```

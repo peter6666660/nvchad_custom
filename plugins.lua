@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -8,17 +8,17 @@ local plugins = {
     lazy = false,
     config = function()
       require("todo-comments").setup()
-    end
+    end,
   },
   -- 注释插件
   {
     "numToStr/Comment.nvim",
     config = function()
       -- 支持jsx, tsx, vue
-      require('Comment').setup {
-        pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+      require("Comment").setup {
+        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
       }
-    end
+    end,
   },
 
   {
@@ -41,7 +41,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -74,7 +74,7 @@ local plugins = {
     "phaazon/hop.nvim",
     event = "BufRead",
     config = function()
-      require("hop").setup({})
+      require("hop").setup {}
     end,
   },
   --翻译插件
@@ -85,11 +85,11 @@ local plugins = {
   -- 轻松修改括号，引号等成对符号
   { "tpope/vim-surround", lazy = false },
   -- 快速选中块, 空格键激活
-  { "gcmt/wildfire.vim",  lazy = false },
+  { "gcmt/wildfire.vim", lazy = false },
   -- 终端配置
   {
     "akinsho/toggleterm.nvim",
-    config = true
+    config = true,
   },
   -- 快速选中 类似 vscode 的 c-d
   -- https://github.com/mg979/vim-visual-multi/wiki/Quick-start
@@ -98,7 +98,12 @@ local plugins = {
   { "windwp/nvim-ts-autotag", lazy = false },
   -- 注释支持 jsx
   {
-    "JoosepAlviste/nvim-ts-context-commentstring"
+    "JoosepAlviste/nvim-ts-context-commentstring",
+  },
+  -- diffview git
+  {
+    "sindrets/diffview.nvim",
+    lazy = false,
   },
   -- markdown-preview
   -- {
