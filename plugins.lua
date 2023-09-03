@@ -100,6 +100,11 @@ local plugins = {
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
   },
+  -- diffview git
+  {
+    "sindrets/diffview.nvim",
+    lazy = false,
+  },
   -- markdown-preview
   -- {
   --   "iamcco/markdown-preview.nvim",
