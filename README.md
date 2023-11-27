@@ -3,7 +3,7 @@
 ### use
 
 rm -rf ~/.config/nvim/lua/custom/
-git clone https://github.com/thorneLew/nvchad_custom.git ~/.config/nvim/lua/custom
+git clone https://github.com/peter6666660/nvchad_custom.git ~/.config/nvim/lua/custom
 
 ### plugins
 
