@@ -23,24 +23,24 @@ M.treesitter = {
   autotag = {
     enable = true,
     filetypes = {
-      "html" ,
+      "html",
       "javascriptreact",
-      'typescriptreact',
-      'vue',
-      'xml',
-      'markdown',
-      'handlebars',
-      'hbs',
-      'tsx',
-      'jsx',
-      'rescript'
-    }
+      "typescriptreact",
+      "vue",
+      "xml",
+      "markdown",
+      "handlebars",
+      "hbs",
+      "tsx",
+      "jsx",
+      "rescript",
+    },
   },
   -- JoosepAlviste/nvim-ts-context-commentstring
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
-  }
+  },
 }
 
 M.mason = {
@@ -49,12 +49,15 @@ M.mason = {
     "lua-language-server",
     "stylua",
 
+    -- c stuff
+    "clangd",
+
     -- web dev stuff
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
     "deno",
-    "prettier"
+    "prettier",
   },
 }
 
