@@ -1,3 +1,4 @@
+-- https://github.com/stevearc/conform.nvim
 require("conform").setup {
   event = {
     "BufReadPre",
@@ -11,6 +12,7 @@ require("conform").setup {
     javascriptreact = { { "prettier" } },
     typescript = { { "prettier" } },
     typescriptreact = { { "prettier" } },
+    go = { { "gofmt" } },
   },
   format_on_save = {
     lsp_fallback = true,

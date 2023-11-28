@@ -29,6 +29,7 @@ local plugins = {
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
   },
+
   -- formatting
   {
     "stevearc/conform.nvim",
@@ -121,22 +122,6 @@ local plugins = {
   --   end,
   --   ft = { "markdown" },
   -- }
-  -- neovim lsp 变量跳转 有ui支持
-  -- {
-  --   "glepnir/lspsaga.nvim",
-  --   branch = "main",
-  --   lazy=false,
-  --   config = function()
-  --     require("lspsaga").setup({
-  --       ui = {
-  --         -- run PackerCompile
-  --         border = "single",
-  --       },
-  --     })
-  --   end
-  -- }
-  --
-  --
   {
     "shellRaining/hlchunk.nvim",
     event = { "UIEnter" },

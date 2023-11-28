@@ -1,3 +1,4 @@
+-- https://github.com/mfussenegger/nvim-lint
 local lint = require "lint"
 
 lint.linters_by_ft = {
@@ -6,6 +7,7 @@ lint.linters_by_ft = {
   javascriptreact = { "eslint_d" },
   typescript = { "eslint_d" },
   typescriptreact = { "eslint_d" },
+  go = { "golangcilint" },
 }
 local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
