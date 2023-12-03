@@ -35,7 +35,7 @@ M.gitsigns = {
 
 M.tabufline = {
   n = {
-    ["<leader>bo"] = { ":BufCloseOther<CR>", "关闭其他tab", opts = { nowait = true } },
+    ["<leader>ba"] = { ":BufCloseAllBufs<CR>", "关闭其他tab", opts = { nowait = true } },
   },
 }
 

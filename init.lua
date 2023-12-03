@@ -6,19 +6,9 @@
 --   command = "tabdo wincmd =",
 -- })
 
-
 -- 加载默认配置
 require("custom.setting").load_options()
 
--- closes tab + other buffers except the current one
-local function closeOtherBufs(c_buf)
-  for _, buf in ipairs(vim.t.bufs) do
-    if buf ~= c_buf then
-      require('nvchad_ui/tabufline').close_buffer(buf)
-    end
-  end
-end
-
-vim.api.nvim_create_user_command("BufCloseOther", function()
-  closeOtherBufs(vim.api.nvim_get_current_buf())
+vim.api.nvim_create_user_command("BufCloseAllBufs", function()
+  require("nvchad.tabufline").closeAllBufs()
 end, {})

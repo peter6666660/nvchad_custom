@@ -7,6 +7,7 @@ require("conform").setup {
   formatters_by_ft = {
     lua = { "stylua" },
     -- Use a sub-list to run only the first available formatter
+    css = { { "prettier" } },
     html = { { "prettier" } },
     javascript = { { "prettier" } },
     javascriptreact = { { "prettier" } },

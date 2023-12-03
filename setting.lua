@@ -11,5 +11,8 @@ M.load_options = function()
     pattern = { "*" },
     command = "normal zx",
   })
+
+  -- voldikss/vim-translator
+  vim.g.translator_default_engines = { "youdao" }
 end
 return M
