@@ -13,6 +13,7 @@ M.load_options = function()
   })
 
   -- voldikss/vim-translator
-  vim.g.translator_default_engines = { "youdao" }
+  vim.g.translator_default_engines = { "bing" }
+  vim.g.translator_window_type = "popup"
 end
 return M
