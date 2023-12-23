@@ -111,8 +111,15 @@ local plugins = {
   -- diffview git
   {
     "sindrets/diffview.nvim",
-    lazy = false,
+    config = function()
+      require("hop").setup {}
+    end,
   },
+  -- {
+  --
+  --   "mfussenegger/nvim-dap",
+  --   lazy = false,
+  -- },
   -- markdown-preview
   -- {
   --   "iamcco/markdown-preview.nvim",
