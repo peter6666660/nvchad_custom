@@ -48,6 +48,8 @@ M.mason = {
     -- web dev stuff
     "vscode-html-language-server",
     "typescript-language-server",
+    "rustfmt",
+    "rust-analyzer",
   },
 }
 

@@ -15,6 +15,7 @@ require("conform").setup {
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
     go = { "goimports", "gofmt" },
+    rust = { "rustfmt" },
   },
   format_on_save = {
     lsp_fallback = true,
