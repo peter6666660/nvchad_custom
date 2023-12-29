@@ -12,6 +12,7 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "rust",
   },
   indent = {
     enable = true,
@@ -50,6 +51,7 @@ M.mason = {
     "typescript-language-server",
     "rustfmt",
     "rust-analyzer",
+    "codelldb",
   },
 }
 

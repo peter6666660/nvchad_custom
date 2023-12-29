@@ -1,4 +1,5 @@
 local overrides = require "custom.configs.overrides"
+local dap = require "custom.configs.dap"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -88,7 +89,6 @@ local plugins = {
   --翻译插件
   {
     "voldikss/vim-translator",
-    lazy = false,
   },
   -- 轻松修改括号，引号等成对符号
   { "tpope/vim-surround", lazy = false },
@@ -115,11 +115,27 @@ local plugins = {
       require("hop").setup {}
     end,
   },
-  -- {
-  --
-  --   "mfussenegger/nvim-dap",
-  --   lazy = false,
-  -- },
+
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      dap.setup()
+    end,
+  },
+  { "folke/neodev.nvim" },
+  {
+    "rcarriga/nvim-dap-ui",
+  },
+  {
+    "theHamsta/nvim-dap-virtual-text",
+  },
+  {
+    "simrat39/rust-tools.nvim",
+    ft = "rust",
+    config = function(_, opts)
+      require "custom.configs.rusttools"
+    end,
+  },
   -- markdown-preview
   -- {
   --   "iamcco/markdown-preview.nvim",

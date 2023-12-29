@@ -39,4 +39,12 @@ M.tabufline = {
   },
 }
 
+M.dap = {
+  n = {
+    ["<leader>db"] = { ":lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint", opts = { nowait = true } },
+    ["<leader>dc"] = { ":lua require'dap'.continue()<CR>", "Continue", opts = { nowait = true } },
+    ["<leader>du"] = { ":lua require'dapui'.toggle()<CR>", "Dap UI", opts = { nowait = true } },
+    ["<leader>de"] = { ":lua require'dapui'.eval()<CR>", "Eval", opts = { nowait = true } },
+  },
+}
 return M
