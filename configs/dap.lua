@@ -16,7 +16,7 @@ M.ui = function()
     commented = true,
     virt_text_pos = vim.fn.has "nvim-0.10" == 1 and "inline" or "eol",
   }
-  require("nvim-dap-repl-highlights").setup()
+  -- require("nvim-dap-repl-highlights").setup()
 end
 
 M.setup = function()

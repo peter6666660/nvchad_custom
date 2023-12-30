@@ -26,8 +26,10 @@ local plugins = {
     "neovim/nvim-lspconfig",
     dependencies = {},
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+      local configs = require "plugins.configs.lspconfig"
+      local on_attach = configs.on_attach
+      local capabilities = configs.capabilities
+      require("custom.configs.lspconfig").setup(on_attach, capabilities)
     end, -- Override to setup mason-lspconfig
   },
 
@@ -134,9 +136,10 @@ local plugins = {
   -- development rust
   {
     "simrat39/rust-tools.nvim",
+    after = "nvim-lspconfig",
     ft = "rust",
     config = function()
-      require "custom.configs.dap_rusttools"
+      require("custom.configs.dap_rusttools").setup()
     end,
   },
 
