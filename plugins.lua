@@ -116,6 +116,7 @@ local plugins = {
     end,
   },
 
+  -- debug - dap - start
   {
     "mfussenegger/nvim-dap",
     config = function()
@@ -129,11 +130,22 @@ local plugins = {
   {
     "theHamsta/nvim-dap-virtual-text",
   },
+  { "LiadOz/nvim-dap-repl-highlights" },
+  -- development rust
   {
     "simrat39/rust-tools.nvim",
     ft = "rust",
-    config = function(_, opts)
-      require "custom.configs.rusttools"
+    config = function()
+      require "custom.configs.dap_rusttools"
+    end,
+  },
+
+  -- command - plugins
+  {
+    "gelguy/wilder.nvim",
+    event = "CmdlineEnter",
+    config = function()
+      require "custom.configs.wilder"
     end,
   },
   -- markdown-preview
