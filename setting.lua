@@ -15,5 +15,7 @@ M.load_options = function()
   -- voldikss/vim-translator
   vim.g.translator_default_engines = { "bing" }
   vim.g.translator_window_type = "popup"
+  -- neovide setting
+  vim.g.neovide_cursor_vfx_mode = "wireframe"
 end
 return M
